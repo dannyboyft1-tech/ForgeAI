@@ -1,0 +1,80 @@
+# Development Log
+
+## Session 1
+Date: 2026-07-03
+
+### Infrastructure
+
+- Created ForgeAI Git repository
+- Connected project to GitHub
+- Established project directory structure
+- Installed VS Code
+- Installed Git
+- Installed Python 3.13.7
+- Installed Icarus Verilog
+- Installed GTKWave
+
+### Architecture
+
+Established project engineering standards:
+
+- Positive-edge clocking
+- Active-high synchronous reset
+- Active-high enable
+- Modular parameterized RTL
+- Verification required for every module
+
+### RTL Modules Completed
+
+register8.v
+- 8-bit synchronous register
+- Verified by simulation
+
+registerN.v
+- Parameterized register
+- Supports arbitrary bit widths
+- Verified for 8-bit and 32-bit configurations
+
+adderN.v
+- Parameterized combinational adder
+- WIDTH+1 output to preserve carry
+- Verified for 8-bit and 32-bit configurations
+
+### Verification
+
+Completed:
+
+- register8 testbench
+- registerN testbench
+- adderN testbench
+
+Verified using:
+
+- Icarus Verilog
+- GTKWave
+
+### Lessons Learned
+
+- Difference between combinational and sequential logic
+- Positive-edge synchronous design
+- Parameterized RTL using WIDTH
+- Importance of verification
+- Reading digital timing waveforms
+
+### Current Hardware Library
+
+rtl/
+    register8.v
+    registerN.v
+    adderN.v
+
+tb/
+    tb_register8.v
+    tb_registerN.v
+    tb_adderN.v
+
+### Next Objectives
+
+- multiplierN
+- MAC unit
+- Processing Element (PE)

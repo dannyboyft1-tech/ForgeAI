@@ -1,0 +1,32 @@
+# Architecture Decision Records (ADR)
+
+## ADR-0001
+Clocking
+
+Decision:
+All synchronous logic shall use the positive edge of the system clock.
+
+Reason:
+Consistency across the entire ForgeAI architecture.
+
+---
+
+## ADR-0002
+Reset
+
+Decision:
+All synchronous modules shall implement an active-high synchronous reset.
+
+Reason:
+Simplifies learning and provides consistent behavior.
+
+---
+
+## ADR-0003
+Parameterization
+
+Decision:
+Reusable modules shall use parameters where practical.
+
+Reason:
+Promotes scalability and reduces duplicated RTL.
