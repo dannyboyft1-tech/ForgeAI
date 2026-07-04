@@ -1,0 +1,77 @@
+$date
+	Fri Jul 03 23:09:15 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_adderN $end
+$var wire 9 ! sum8 [8:0] $end
+$var wire 33 " sum32 [32:0] $end
+$var reg 32 # a32 [31:0] $end
+$var reg 8 $ a8 [7:0] $end
+$var reg 32 % b32 [31:0] $end
+$var reg 8 & b8 [7:0] $end
+$scope module adder32_uut $end
+$var wire 32 ' a [31:0] $end
+$var wire 32 ( b [31:0] $end
+$var wire 33 ) sum [32:0] $end
+$var parameter 32 * WIDTH $end
+$upscope $end
+$scope module adder8_uut $end
+$var wire 8 + a [7:0] $end
+$var wire 8 , b [7:0] $end
+$var wire 9 - sum [8:0] $end
+$var parameter 32 . WIDTH $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 .
+b100000 *
+$end
+#0
+$dumpvars
+b11110 -
+b10100 ,
+b1010 +
+b110110101100 )
+b100111000100 (
+b1111101000 '
+b10100 &
+b100111000100 %
+b1010 $
+b1111101000 #
+b110110101100 "
+b11110 !
+$end
+#10000
+b1 %
+b1 (
+b100000000000000000000000000000000 "
+b100000000000000000000000000000000 )
+b11111111111111111111111111111111 #
+b11111111111111111111111111111111 '
+b1 &
+b1 ,
+b100000000 !
+b100000000 -
+b11111111 $
+b11111111 +
+#20000
+b1000 %
+b1000 (
+b10010001101000101011010000000 "
+b10010001101000101011010000000 )
+b10010001101000101011001111000 #
+b10010001101000101011001111000 '
+b111010 &
+b111010 ,
+b1100100 !
+b1100100 -
+b101010 $
+b101010 +
+#30000

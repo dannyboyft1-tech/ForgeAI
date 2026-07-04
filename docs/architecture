@@ -1,0 +1,134 @@
+============================================================
+ForgeAI Architecture Specification
+Version: 0.1
+Status: Draft
+Author: Daniel Simpson
+Project Start: July 3, 2026
+============================================================
+
+MISSION
+
+ForgeAI is a scalable FPGA-based AI compute architecture designed
+from first principles.
+
+The long-term objective is to create a modular AI accelerator
+capable of performing high-speed matrix computation while
+presenting itself to the host computer as a single compute device.
+
+DESIGN PHILOSOPHY
+
+• FPGA First
+
+• Modular Design
+
+• Parallel Compute
+
+• Hardware Verified
+
+• Scalable Architecture
+
+• Professional Documentation
+
+DESIGN STANDARDS
+
+Clock:
+    Positive Edge Triggered
+
+Reset:
+    Active High
+    Synchronous
+
+Enable:
+    Active High
+
+Default Register Width:
+    8-bit unless otherwise specified
+
+HARDWARE HIEARCHY
+
+ForgeAI
+
+↓
+
+Board
+
+↓
+
+FPGA
+
+↓
+
+Compute Tile
+
+↓
+
+Processing Element
+
+↓
+
+MAC
+
+↓
+
+Register
+
+↓
+
+Flip-Flop
+
+ROADMAP
+
+Phase 1
+
+Digital Logic
+
+Phase 2
+
+MAC
+
+Phase 3
+
+Processing Element
+
+Phase 4
+
+Matrix Engine
+
+Phase 5
+
+Host Interface
+
+Phase 6
+
+FPGA Deployment
+
+Phase 7
+
+Multi-FPGA Compute
+
+ENGINEERING STANDARDS
+
+Every module
+
+Must compile
+
+Must simulate
+
+Must have a testbench
+
+Must be documented
+
+Must pass verification
+
+DECISIONS
+
+0001
+Reset shal be Synchronous and active high
+Reason
+Consistency across all ForgeAI modules
+
+0002
+All arithmetic shall used signed INT8 unless otherwise specified
+
+0003
+All modules shall include synchronous enable

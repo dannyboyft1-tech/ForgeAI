@@ -20,3 +20,16 @@ Design a scalable FPGA compute architecture capable of performing high-performan
 - [ ] USB Communication
 - [ ] PCIe Communication
 - [ ] Multi-FPGA Compute Board
+
+ForgeAI Philosophy
+
+"Hardware is built one verified block at a time."
+
+Every module must be:
+
+✔ Understood
+✔ Simulated
+✔ Verified
+✔ Documented
+
+No exceptions.
