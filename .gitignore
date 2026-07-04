@@ -1,0 +1,20 @@
+# Visual Studio
+.vs/
+
+# VS Code
+.vscode/
+
+# Vivado
+*.jou
+*.log
+*.str
+*.cache
+*.runs
+*.sim
+*.gen
+*.ip_user_files
+*.Xil
+
+# Temporary
+*.tmp
+*.bak
