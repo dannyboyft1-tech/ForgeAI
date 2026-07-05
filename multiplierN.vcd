@@ -1,0 +1,77 @@
+$date
+	Fri Jul 03 23:35:13 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_multiplierN $end
+$var wire 16 ! product8 [15:0] $end
+$var wire 32 " product16 [31:0] $end
+$var reg 16 # a16 [15:0] $end
+$var reg 8 $ a8 [7:0] $end
+$var reg 16 % b16 [15:0] $end
+$var reg 8 & b8 [7:0] $end
+$scope module mult16_uut $end
+$var wire 16 ' a [15:0] $end
+$var wire 16 ( b [15:0] $end
+$var wire 32 ) product [31:0] $end
+$var parameter 32 * WIDTH $end
+$upscope $end
+$scope module mult8_uut $end
+$var wire 8 + a [7:0] $end
+$var wire 8 , b [7:0] $end
+$var wire 16 - product [15:0] $end
+$var parameter 32 . WIDTH $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 .
+b10000 *
+$end
+#0
+$dumpvars
+b100011 -
+b111 ,
+b101 +
+b100111000100 )
+b11001 (
+b1100100 '
+b111 &
+b11001 %
+b101 $
+b1100100 #
+b100111000100 "
+b100011 !
+$end
+#10000
+b10 %
+b10 (
+b11111111111111110 "
+b11111111111111110 )
+b1111111111111111 #
+b1111111111111111 '
+b10 &
+b10 ,
+b111111110 !
+b111111110 -
+b11111111 $
+b11111111 +
+#20000
+b111000 %
+b111000 (
+b10000110111110000 "
+b10000110111110000 )
+b10011010010 #
+b10011010010 '
+b1100 &
+b1100 ,
+b10010000 !
+b10010000 -
+b1100 $
+b1100 +
+#30000

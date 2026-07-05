@@ -1,0 +1,160 @@
+$date
+	Sat Jul 04 21:55:27 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_forgeai_device_regs $end
+$var wire 1 ! start $end
+$var wire 32 " read_data [31:0] $end
+$var wire 1 # clear $end
+$var reg 1 $ busy $end
+$var reg 1 % clk $end
+$var reg 1 & done $end
+$var reg 8 ' read_addr [7:0] $end
+$var reg 32 ( result_in [31:0] $end
+$var reg 1 ) rst $end
+$var reg 8 * write_addr [7:0] $end
+$var reg 32 + write_data [31:0] $end
+$var reg 1 , write_en $end
+$scope module uut $end
+$var wire 1 $ busy $end
+$var wire 1 % clk $end
+$var wire 1 & done $end
+$var wire 8 - read_addr [7:0] $end
+$var wire 32 . result_in [31:0] $end
+$var wire 1 ) rst $end
+$var wire 8 / write_addr [7:0] $end
+$var wire 32 0 write_data [31:0] $end
+$var wire 1 , write_en $end
+$var parameter 8 1 CONTROL_ADDR $end
+$var parameter 32 2 DEVICE_ID $end
+$var parameter 8 3 DEVICE_ID_ADDR $end
+$var parameter 8 4 RESULT_ADDR $end
+$var parameter 8 5 STATUS_ADDR $end
+$var parameter 32 6 VERSION $end
+$var parameter 8 7 VERSION_ADDR $end
+$var reg 1 # clear $end
+$var reg 32 8 read_data [31:0] $end
+$var reg 1 ! start $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 7
+b1 6
+b1000 5
+b10000 4
+b0 3
+b11110000101000010000000000000001 2
+b1100 1
+$end
+#0
+$dumpvars
+b11110000101000010000000000000001 8
+b0 0
+b0 /
+b0 .
+b0 -
+0,
+b0 +
+b0 *
+0)
+b0 (
+b0 '
+0&
+0%
+0$
+x#
+b11110000101000010000000000000001 "
+x!
+$end
+#5000
+0#
+0!
+1%
+#10000
+1)
+0%
+#15000
+1%
+#20000
+0)
+0%
+#25000
+1%
+#30000
+0%
+#35000
+1%
+#40000
+b1 "
+b1 8
+b100 '
+b100 -
+0%
+#45000
+1%
+#50000
+b1000 '
+b1000 -
+1$
+0%
+#55000
+1%
+#60000
+b10 "
+b10 8
+1&
+0$
+0%
+#65000
+1%
+#70000
+b10101110 "
+b10101110 8
+b10000 '
+b10000 -
+b10101110 (
+b10101110 .
+0%
+#75000
+1%
+#80000
+1,
+b1 +
+b1 0
+b1100 *
+b1100 /
+0%
+#85000
+1!
+1%
+#90000
+b0 +
+b0 0
+0,
+0%
+#95000
+0!
+1%
+#100000
+1,
+b10 +
+b10 0
+0%
+#105000
+1#
+1%
+#110000
+0,
+0%
+#115000
+0#
+1%
+#120000
+0%

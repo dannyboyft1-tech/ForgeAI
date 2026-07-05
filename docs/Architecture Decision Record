@@ -30,3 +30,46 @@ Reusable modules shall use parameters where practical.
 
 Reason:
 Promotes scalability and reduces duplicated RTL.
+
+## ADR-0004
+Architecture Direction
+
+Decision:
+ForgeAI shall follow a GPU-inspired parallel compute architecture rather than a TPU-only systolic architecture.
+
+Reason:
+A GPU-like architecture provides broader usefulness for matrix math, AI inference, signal processing, simulation, and general parallel workloads. ForgeAI may still include TPU-like MAC arrays internally where useful, but the overall system shall remain flexible and programmable.
+
+## ADR-0005
+ForgeCore Execution Model
+
+Decision:
+ForgeCore v1 shall execute one instruction at a time using a single-cycle execution model.
+
+Future versions may introduce instruction pipelining after architectural verification.
+
+Reason:
+A single-cycle architecture is easier to understand, verify, and debug while establishing the foundation of the instruction set and execution model.
+
+## ADR-0006
+Zero Register
+
+Decision:
+Register R0 shall be hardwired to zero.
+
+Reads from R0 shall always return 0.
+
+Writes to R0 shall be ignored.
+
+Reason:
+A zero register simplifies instruction generation, reduces the need for explicit clear/load-zero operations, and aligns ForgeAI with proven RISC-style architecture patterns.
+
+## ADR-0007
+Module Freeze Policy
+
+Once a module passes simulation and satisfies its documented requirements,
+its public interface shall be considered frozen.
+
+Future enhancements shall be implemented as new module revisions rather
+than modifying verified modules, unless a defect or architectural change
+requires otherwise.
