@@ -1,0 +1,647 @@
+$date
+	Sun Jul 05 01:07:46 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_tile_controller_compute $end
+$var wire 1 ! wgt_load $end
+$var wire 32 " weights [31:0] $end
+$var wire 32 # tile_result [31:0] $end
+$var wire 1 $ tile_done $end
+$var wire 4 % state [3:0] $end
+$var wire 32 & result [31:0] $end
+$var wire 1 ' fifo_read_en $end
+$var wire 32 ( fifo_read_data [31:0] $end
+$var wire 1 ) fifo_full $end
+$var wire 1 * fifo_empty $end
+$var wire 1 + done $end
+$var wire 1 , compute_en $end
+$var wire 1 - busy $end
+$var wire 32 . activations [31:0] $end
+$var wire 1 / act_load $end
+$var wire 1 0 acc_clear $end
+$var reg 1 1 clk $end
+$var reg 32 2 fifo_write_data [31:0] $end
+$var reg 1 3 fifo_write_en $end
+$var reg 1 4 rst $end
+$var reg 1 5 start $end
+$scope module controller $end
+$var wire 1 1 clk $end
+$var wire 1 4 rst $end
+$var wire 1 5 start $end
+$var wire 32 6 tile_result [31:0] $end
+$var wire 1 $ tile_done $end
+$var wire 32 7 fifo_read_data [31:0] $end
+$var wire 1 * fifo_empty $end
+$var parameter 4 8 CLEAR_ACC $end
+$var parameter 4 9 COMPUTE $end
+$var parameter 4 : DONE_STATE $end
+$var parameter 4 ; IDLE $end
+$var parameter 4 < LATCH_ACT $end
+$var parameter 4 = LATCH_WGT $end
+$var parameter 4 > LOAD_TILE $end
+$var parameter 4 ? READ_ACT $end
+$var parameter 4 @ READ_WGT $end
+$var parameter 4 A STORE_RESULT $end
+$var parameter 4 B WAIT_DONE $end
+$var reg 1 0 acc_clear $end
+$var reg 1 / act_load $end
+$var reg 32 C activations [31:0] $end
+$var reg 1 - busy $end
+$var reg 1 , compute_en $end
+$var reg 1 + done $end
+$var reg 1 ' fifo_read_en $end
+$var reg 32 D result [31:0] $end
+$var reg 4 E state [3:0] $end
+$var reg 32 F weights [31:0] $end
+$var reg 1 ! wgt_load $end
+$upscope $end
+$scope module fifo $end
+$var wire 1 1 clk $end
+$var wire 1 ' read_en $end
+$var wire 1 4 rst $end
+$var wire 32 G write_data [31:0] $end
+$var wire 1 3 write_en $end
+$var wire 1 ) full $end
+$var wire 1 * empty $end
+$var parameter 32 H DATA_WIDTH $end
+$var parameter 32 I DEPTH $end
+$var reg 3 J count [2:0] $end
+$var reg 32 K read_data [31:0] $end
+$var reg 3 L read_ptr [2:0] $end
+$var reg 3 M write_ptr [2:0] $end
+$upscope $end
+$scope module tile $end
+$var wire 1 0 acc_clear $end
+$var wire 1 / act_load $end
+$var wire 32 N activations [31:0] $end
+$var wire 1 1 clk $end
+$var wire 1 , compute_en $end
+$var wire 1 4 rst $end
+$var wire 32 O weights [31:0] $end
+$var wire 1 ! wgt_load $end
+$var wire 8 P wgt3 [7:0] $end
+$var wire 8 Q wgt2 [7:0] $end
+$var wire 8 R wgt1 [7:0] $end
+$var wire 8 S wgt0 [7:0] $end
+$var wire 32 T tile_result [31:0] $end
+$var wire 8 U act3 [7:0] $end
+$var wire 8 V act2 [7:0] $end
+$var wire 8 W act1 [7:0] $end
+$var wire 8 X act0 [7:0] $end
+$var wire 32 Y acc3 [31:0] $end
+$var wire 32 Z acc2 [31:0] $end
+$var wire 32 [ acc1 [31:0] $end
+$var wire 32 \ acc0 [31:0] $end
+$var reg 1 $ done $end
+$scope module pe0 $end
+$var wire 1 0 acc_clear $end
+$var wire 8 ] act_in [7:0] $end
+$var wire 1 / act_load $end
+$var wire 1 1 clk $end
+$var wire 1 , compute_en $end
+$var wire 1 4 rst $end
+$var wire 8 ^ wgt_in [7:0] $end
+$var wire 1 ! wgt_load $end
+$var wire 32 _ acc_out [31:0] $end
+$var reg 8 ` act_reg [7:0] $end
+$var reg 8 a wgt_reg [7:0] $end
+$scope module pe_mac $end
+$var wire 8 b a [7:0] $end
+$var wire 8 c b [7:0] $end
+$var wire 1 0 clear_acc $end
+$var wire 1 1 clk $end
+$var wire 1 , en $end
+$var wire 1 4 rst $end
+$var wire 32 d product_ext [31:0] $end
+$var wire 16 e product [15:0] $end
+$var parameter 32 f ACC_WIDTH $end
+$var parameter 32 g DATA_WIDTH $end
+$var parameter 64 h PRODUCT_WIDTH $end
+$var reg 32 i acc [31:0] $end
+$upscope $end
+$upscope $end
+$scope module pe1 $end
+$var wire 1 0 acc_clear $end
+$var wire 8 j act_in [7:0] $end
+$var wire 1 / act_load $end
+$var wire 1 1 clk $end
+$var wire 1 , compute_en $end
+$var wire 1 4 rst $end
+$var wire 8 k wgt_in [7:0] $end
+$var wire 1 ! wgt_load $end
+$var wire 32 l acc_out [31:0] $end
+$var reg 8 m act_reg [7:0] $end
+$var reg 8 n wgt_reg [7:0] $end
+$scope module pe_mac $end
+$var wire 8 o a [7:0] $end
+$var wire 8 p b [7:0] $end
+$var wire 1 0 clear_acc $end
+$var wire 1 1 clk $end
+$var wire 1 , en $end
+$var wire 1 4 rst $end
+$var wire 32 q product_ext [31:0] $end
+$var wire 16 r product [15:0] $end
+$var parameter 32 s ACC_WIDTH $end
+$var parameter 32 t DATA_WIDTH $end
+$var parameter 64 u PRODUCT_WIDTH $end
+$var reg 32 v acc [31:0] $end
+$upscope $end
+$upscope $end
+$scope module pe2 $end
+$var wire 1 0 acc_clear $end
+$var wire 8 w act_in [7:0] $end
+$var wire 1 / act_load $end
+$var wire 1 1 clk $end
+$var wire 1 , compute_en $end
+$var wire 1 4 rst $end
+$var wire 8 x wgt_in [7:0] $end
+$var wire 1 ! wgt_load $end
+$var wire 32 y acc_out [31:0] $end
+$var reg 8 z act_reg [7:0] $end
+$var reg 8 { wgt_reg [7:0] $end
+$scope module pe_mac $end
+$var wire 8 | a [7:0] $end
+$var wire 8 } b [7:0] $end
+$var wire 1 0 clear_acc $end
+$var wire 1 1 clk $end
+$var wire 1 , en $end
+$var wire 1 4 rst $end
+$var wire 32 ~ product_ext [31:0] $end
+$var wire 16 !" product [15:0] $end
+$var parameter 32 "" ACC_WIDTH $end
+$var parameter 32 #" DATA_WIDTH $end
+$var parameter 64 $" PRODUCT_WIDTH $end
+$var reg 32 %" acc [31:0] $end
+$upscope $end
+$upscope $end
+$scope module pe3 $end
+$var wire 1 0 acc_clear $end
+$var wire 8 &" act_in [7:0] $end
+$var wire 1 / act_load $end
+$var wire 1 1 clk $end
+$var wire 1 , compute_en $end
+$var wire 1 4 rst $end
+$var wire 8 '" wgt_in [7:0] $end
+$var wire 1 ! wgt_load $end
+$var wire 32 (" acc_out [31:0] $end
+$var reg 8 )" act_reg [7:0] $end
+$var reg 8 *" wgt_reg [7:0] $end
+$scope module pe_mac $end
+$var wire 8 +" a [7:0] $end
+$var wire 8 ," b [7:0] $end
+$var wire 1 0 clear_acc $end
+$var wire 1 1 clk $end
+$var wire 1 , en $end
+$var wire 1 4 rst $end
+$var wire 32 -" product_ext [31:0] $end
+$var wire 16 ." product [15:0] $end
+$var parameter 32 /" ACC_WIDTH $end
+$var parameter 32 0" DATA_WIDTH $end
+$var parameter 64 1" PRODUCT_WIDTH $end
+$var reg 32 2" acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10000 1"
+b1000 0"
+b100000 /"
+b10000 $"
+b1000 #"
+b100000 ""
+b10000 u
+b1000 t
+b100000 s
+b10000 h
+b1000 g
+b100000 f
+b100 I
+b100000 H
+b1000 B
+b1001 A
+b11 @
+b1 ?
+b101 >
+b100 =
+b10 <
+b0 ;
+b1010 :
+b111 9
+b110 8
+$end
+#0
+$dumpvars
+bx 2"
+bx ."
+bx -"
+bx ,"
+bx +"
+bx *"
+bx )"
+bx ("
+bx '"
+bx &"
+bx %"
+bx !"
+bx ~
+bx }
+bx |
+bx {
+bx z
+bx y
+bx x
+bx w
+bx v
+bx r
+bx q
+bx p
+bx o
+bx n
+bx m
+bx l
+bx k
+bx j
+bx i
+bx e
+bx d
+bx c
+bx b
+bx a
+bx `
+bx _
+bx ^
+bx ]
+bx \
+bx [
+bx Z
+bx Y
+bx X
+bx W
+bx V
+bx U
+bx T
+bx S
+bx R
+bx Q
+bx P
+bx O
+bx N
+bx M
+bx L
+bx K
+bx J
+b0 G
+bx F
+bx E
+bx D
+bx C
+bx 7
+bx 6
+05
+04
+03
+b0 2
+01
+x0
+x/
+bx .
+x-
+x,
+x+
+x*
+x)
+bx (
+x'
+bx &
+bx %
+x$
+bx #
+bx "
+x!
+$end
+#5000
+0-
+b0 %
+b0 E
+0+
+0,
+00
+0!
+0/
+0'
+11
+#10000
+14
+01
+#15000
+b0 S
+b0 ^
+b0 R
+b0 k
+b0 Q
+b0 x
+b0 P
+b0 '"
+b0 X
+b0 ]
+b0 W
+b0 j
+b0 V
+b0 w
+b0 U
+b0 &"
+0$
+b0 -"
+b0 ."
+b0 *"
+b0 ,"
+b0 )"
+b0 +"
+b0 #
+b0 6
+b0 T
+b0 Y
+b0 ("
+b0 2"
+b0 ~
+b0 !"
+b0 {
+b0 }
+b0 z
+b0 |
+b0 Z
+b0 y
+b0 %"
+b0 q
+b0 r
+b0 n
+b0 p
+b0 m
+b0 o
+b0 [
+b0 l
+b0 v
+b0 d
+b0 e
+b0 a
+b0 c
+b0 `
+b0 b
+b0 \
+b0 _
+b0 i
+b0 &
+b0 D
+b0 "
+b0 F
+b0 O
+b0 .
+b0 C
+b0 N
+b0 (
+b0 7
+b0 K
+1*
+0)
+b0 J
+b0 L
+b0 M
+11
+#20000
+04
+01
+#25000
+11
+#30000
+13
+b100000000110000001000000001 2
+b100000000110000001000000001 G
+01
+#35000
+0*
+b1 J
+b1 M
+11
+#40000
+b1000000001110000011000000101 2
+b1000000001110000011000000101 G
+01
+#45000
+b10 J
+b10 M
+11
+#50000
+03
+01
+#55000
+11
+#60000
+15
+01
+#65000
+b1 %
+b1 E
+1'
+1-
+11
+#70000
+05
+01
+#75000
+b10 %
+b10 E
+0'
+b1 J
+b1 L
+b100000000110000001000000001 (
+b100000000110000001000000001 7
+b100000000110000001000000001 K
+11
+#80000
+01
+#85000
+b1 X
+b1 ]
+b10 W
+b10 j
+b11 V
+b11 w
+b100 U
+b100 &"
+b11 %
+b11 E
+1'
+b100000000110000001000000001 .
+b100000000110000001000000001 C
+b100000000110000001000000001 N
+11
+#90000
+01
+#95000
+b100 %
+b100 E
+0'
+1*
+b0 J
+b10 L
+b1000000001110000011000000101 (
+b1000000001110000011000000101 7
+b1000000001110000011000000101 K
+11
+#100000
+01
+#105000
+b101 S
+b101 ^
+b110 R
+b110 k
+b111 Q
+b111 x
+b1000 P
+b1000 '"
+b101 %
+b101 E
+b1000000001110000011000000101 "
+b1000000001110000011000000101 F
+b1000000001110000011000000101 O
+11
+#110000
+01
+#115000
+b110 %
+b110 E
+1!
+1/
+11
+#120000
+01
+#125000
+b111 %
+b111 E
+10
+0!
+0/
+b101 d
+b101 e
+b101 a
+b101 c
+b1 `
+b1 b
+b1100 q
+b1100 r
+b110 n
+b110 p
+b10 m
+b10 o
+b10101 ~
+b10101 !"
+b111 {
+b111 }
+b11 z
+b11 |
+b100000 -"
+b100000 ."
+b1000 *"
+b1000 ,"
+b100 )"
+b100 +"
+11
+#130000
+01
+#135000
+b1000 %
+b1000 E
+1,
+00
+11
+#140000
+01
+#145000
+0,
+b101 \
+b101 _
+b101 i
+b1100 [
+b1100 l
+b1100 v
+b10101 Z
+b10101 y
+b10101 %"
+b1000110 #
+b1000110 6
+b1000110 T
+b100000 Y
+b100000 ("
+b100000 2"
+1$
+11
+#150000
+01
+#155000
+0$
+b1001 %
+b1001 E
+11
+#160000
+01
+#165000
+b1010 %
+b1010 E
+b1000110 &
+b1000110 D
+11
+#170000
+01
+#175000
+b0 %
+b0 E
+1+
+0-
+11
+#180000
+01
+#185000
+0+
+11
+#190000
+01
+#195000
+11
+#200000
+01
+#205000
+11
+#210000
+01
+#215000
+11
+#220000
+01
+#225000
+11
+#230000
+01
+#235000
+11
+#240000
+01
+#245000
+11
+#250000
+01
+#255000
+11
+#260000
+01
+#265000
+11
+#270000
+01

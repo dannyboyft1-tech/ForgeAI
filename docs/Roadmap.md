@@ -1,25 +1,26 @@
-Phase 1
+# Milestone 1 Foundation
 ✔ Register
-✔ Parameterized Register
-✔ Parameterized Adder
-⬜ Parameterized Multiplier
-⬜ MAC Unit
-⬜ Processing Element
+✔ RegisterN
+✔ Adder
+✔ Multiplier
+✔ MAC
+✔ Processing Element
+✔ Device Registers
+✔ FIFO
+✔ Tile Controller 
 
-Phase 2
+# Milestone 2 AI Compute
 ⬜ Systolic Array
-
-Phase 3
 ⬜ Scratchpad Memory
+⬜ Matrix Engine
 
-Phase 4
-⬜ USB Interface
-
-Phase 5
+# Milestone 3 Hardware Platform
+⬜ USB
 ⬜ FPGA Deployment
+⬜ ARM/Linux
 
-Phase 6
-⬜ PCIe DMA
-
-Phase 7
-⬜ Multi-FPGA Board
+# Milestone 4 Accelerator Card
+⬜ PCIe
+⬜ DMA
+⬜ Driver
+⬜ Runtime
