@@ -1,0 +1,1416 @@
+$date
+	Tue Jul 07 21:57:14 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_systolic_array $end
+$var wire 512 ! accumulators_out [511:0] $end
+$var parameter 32 " COLS $end
+$var parameter 32 # ROWS $end
+$var reg 1 $ acc_clear $end
+$var reg 1 % act_load $end
+$var reg 32 & activations_in [31:0] $end
+$var reg 1 ' clk $end
+$var reg 1 ( compute_en $end
+$var reg 1 ) rst $end
+$var reg 32 * weights_in [31:0] $end
+$var reg 1 + wgt_load $end
+$scope module uut $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 32 , activations_in [31:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 32 - weights_in [31:0] $end
+$var wire 1 + wgt_load $end
+$var wire 512 . accumulators_out [511:0] $end
+$var parameter 32 / COLS $end
+$var parameter 32 0 ROWS $end
+$scope begin ROW_GEN[0] $end
+$var parameter 2 1 r $end
+$scope begin COL_GEN[0] $end
+$var wire 8 2 wgt_out [7:0] $end
+$var wire 8 3 act_out [7:0] $end
+$var wire 32 4 acc [31:0] $end
+$var parameter 2 5 c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 6 activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 7 weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 8 acc_out [31:0] $end
+$var reg 8 9 activation_out [7:0] $end
+$var reg 8 : activation_reg [7:0] $end
+$var reg 8 ; weight_out [7:0] $end
+$var reg 8 < weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 = a [7:0] $end
+$var wire 8 > b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 ? product_ext [31:0] $end
+$var wire 16 @ product [15:0] $end
+$var parameter 32 A ACC_WIDTH $end
+$var parameter 32 B DATA_WIDTH $end
+$var parameter 64 C PRODUCT_WIDTH $end
+$var reg 32 D acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin COL_GEN[1] $end
+$var wire 8 E wgt_out [7:0] $end
+$var wire 8 F act_out [7:0] $end
+$var wire 32 G acc [31:0] $end
+$var parameter 2 H c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 I activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 J weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 K acc_out [31:0] $end
+$var reg 8 L activation_out [7:0] $end
+$var reg 8 M activation_reg [7:0] $end
+$var reg 8 N weight_out [7:0] $end
+$var reg 8 O weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 P a [7:0] $end
+$var wire 8 Q b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 R product_ext [31:0] $end
+$var wire 16 S product [15:0] $end
+$var parameter 32 T ACC_WIDTH $end
+$var parameter 32 U DATA_WIDTH $end
+$var parameter 64 V PRODUCT_WIDTH $end
+$var reg 32 W acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin COL_GEN[2] $end
+$var wire 8 X wgt_out [7:0] $end
+$var wire 8 Y act_out [7:0] $end
+$var wire 32 Z acc [31:0] $end
+$var parameter 3 [ c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 \ activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 ] weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 ^ acc_out [31:0] $end
+$var reg 8 _ activation_out [7:0] $end
+$var reg 8 ` activation_reg [7:0] $end
+$var reg 8 a weight_out [7:0] $end
+$var reg 8 b weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 c a [7:0] $end
+$var wire 8 d b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 e product_ext [31:0] $end
+$var wire 16 f product [15:0] $end
+$var parameter 32 g ACC_WIDTH $end
+$var parameter 32 h DATA_WIDTH $end
+$var parameter 64 i PRODUCT_WIDTH $end
+$var reg 32 j acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin COL_GEN[3] $end
+$var wire 8 k wgt_out [7:0] $end
+$var wire 8 l act_out [7:0] $end
+$var wire 32 m acc [31:0] $end
+$var parameter 3 n c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 o activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 p weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 q acc_out [31:0] $end
+$var reg 8 r activation_out [7:0] $end
+$var reg 8 s activation_reg [7:0] $end
+$var reg 8 t weight_out [7:0] $end
+$var reg 8 u weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 v a [7:0] $end
+$var wire 8 w b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 x product_ext [31:0] $end
+$var wire 16 y product [15:0] $end
+$var parameter 32 z ACC_WIDTH $end
+$var parameter 32 { DATA_WIDTH $end
+$var parameter 64 | PRODUCT_WIDTH $end
+$var reg 32 } acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin ROW_GEN[1] $end
+$var parameter 2 ~ r $end
+$scope begin COL_GEN[0] $end
+$var wire 8 !" wgt_out [7:0] $end
+$var wire 8 "" act_out [7:0] $end
+$var wire 32 #" acc [31:0] $end
+$var parameter 2 $" c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 %" activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 &" weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 '" acc_out [31:0] $end
+$var reg 8 (" activation_out [7:0] $end
+$var reg 8 )" activation_reg [7:0] $end
+$var reg 8 *" weight_out [7:0] $end
+$var reg 8 +" weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 ," a [7:0] $end
+$var wire 8 -" b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 ." product_ext [31:0] $end
+$var wire 16 /" product [15:0] $end
+$var parameter 32 0" ACC_WIDTH $end
+$var parameter 32 1" DATA_WIDTH $end
+$var parameter 64 2" PRODUCT_WIDTH $end
+$var reg 32 3" acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin COL_GEN[1] $end
+$var wire 8 4" wgt_out [7:0] $end
+$var wire 8 5" act_out [7:0] $end
+$var wire 32 6" acc [31:0] $end
+$var parameter 2 7" c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 8" activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 9" weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 :" acc_out [31:0] $end
+$var reg 8 ;" activation_out [7:0] $end
+$var reg 8 <" activation_reg [7:0] $end
+$var reg 8 =" weight_out [7:0] $end
+$var reg 8 >" weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 ?" a [7:0] $end
+$var wire 8 @" b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 A" product_ext [31:0] $end
+$var wire 16 B" product [15:0] $end
+$var parameter 32 C" ACC_WIDTH $end
+$var parameter 32 D" DATA_WIDTH $end
+$var parameter 64 E" PRODUCT_WIDTH $end
+$var reg 32 F" acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin COL_GEN[2] $end
+$var wire 8 G" wgt_out [7:0] $end
+$var wire 8 H" act_out [7:0] $end
+$var wire 32 I" acc [31:0] $end
+$var parameter 3 J" c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 K" activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 L" weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 M" acc_out [31:0] $end
+$var reg 8 N" activation_out [7:0] $end
+$var reg 8 O" activation_reg [7:0] $end
+$var reg 8 P" weight_out [7:0] $end
+$var reg 8 Q" weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 R" a [7:0] $end
+$var wire 8 S" b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 T" product_ext [31:0] $end
+$var wire 16 U" product [15:0] $end
+$var parameter 32 V" ACC_WIDTH $end
+$var parameter 32 W" DATA_WIDTH $end
+$var parameter 64 X" PRODUCT_WIDTH $end
+$var reg 32 Y" acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin COL_GEN[3] $end
+$var wire 8 Z" wgt_out [7:0] $end
+$var wire 8 [" act_out [7:0] $end
+$var wire 32 \" acc [31:0] $end
+$var parameter 3 ]" c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 ^" activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 _" weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 `" acc_out [31:0] $end
+$var reg 8 a" activation_out [7:0] $end
+$var reg 8 b" activation_reg [7:0] $end
+$var reg 8 c" weight_out [7:0] $end
+$var reg 8 d" weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 e" a [7:0] $end
+$var wire 8 f" b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 g" product_ext [31:0] $end
+$var wire 16 h" product [15:0] $end
+$var parameter 32 i" ACC_WIDTH $end
+$var parameter 32 j" DATA_WIDTH $end
+$var parameter 64 k" PRODUCT_WIDTH $end
+$var reg 32 l" acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin ROW_GEN[2] $end
+$var parameter 3 m" r $end
+$scope begin COL_GEN[0] $end
+$var wire 8 n" wgt_out [7:0] $end
+$var wire 8 o" act_out [7:0] $end
+$var wire 32 p" acc [31:0] $end
+$var parameter 2 q" c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 r" activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 s" weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 t" acc_out [31:0] $end
+$var reg 8 u" activation_out [7:0] $end
+$var reg 8 v" activation_reg [7:0] $end
+$var reg 8 w" weight_out [7:0] $end
+$var reg 8 x" weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 y" a [7:0] $end
+$var wire 8 z" b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 {" product_ext [31:0] $end
+$var wire 16 |" product [15:0] $end
+$var parameter 32 }" ACC_WIDTH $end
+$var parameter 32 ~" DATA_WIDTH $end
+$var parameter 64 !# PRODUCT_WIDTH $end
+$var reg 32 "# acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin COL_GEN[1] $end
+$var wire 8 ## wgt_out [7:0] $end
+$var wire 8 $# act_out [7:0] $end
+$var wire 32 %# acc [31:0] $end
+$var parameter 2 &# c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 '# activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 (# weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 )# acc_out [31:0] $end
+$var reg 8 *# activation_out [7:0] $end
+$var reg 8 +# activation_reg [7:0] $end
+$var reg 8 ,# weight_out [7:0] $end
+$var reg 8 -# weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 .# a [7:0] $end
+$var wire 8 /# b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 0# product_ext [31:0] $end
+$var wire 16 1# product [15:0] $end
+$var parameter 32 2# ACC_WIDTH $end
+$var parameter 32 3# DATA_WIDTH $end
+$var parameter 64 4# PRODUCT_WIDTH $end
+$var reg 32 5# acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin COL_GEN[2] $end
+$var wire 8 6# wgt_out [7:0] $end
+$var wire 8 7# act_out [7:0] $end
+$var wire 32 8# acc [31:0] $end
+$var parameter 3 9# c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 :# activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 ;# weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 <# acc_out [31:0] $end
+$var reg 8 =# activation_out [7:0] $end
+$var reg 8 ># activation_reg [7:0] $end
+$var reg 8 ?# weight_out [7:0] $end
+$var reg 8 @# weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 A# a [7:0] $end
+$var wire 8 B# b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 C# product_ext [31:0] $end
+$var wire 16 D# product [15:0] $end
+$var parameter 32 E# ACC_WIDTH $end
+$var parameter 32 F# DATA_WIDTH $end
+$var parameter 64 G# PRODUCT_WIDTH $end
+$var reg 32 H# acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin COL_GEN[3] $end
+$var wire 8 I# wgt_out [7:0] $end
+$var wire 8 J# act_out [7:0] $end
+$var wire 32 K# acc [31:0] $end
+$var parameter 3 L# c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 M# activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 N# weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 O# acc_out [31:0] $end
+$var reg 8 P# activation_out [7:0] $end
+$var reg 8 Q# activation_reg [7:0] $end
+$var reg 8 R# weight_out [7:0] $end
+$var reg 8 S# weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 T# a [7:0] $end
+$var wire 8 U# b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 V# product_ext [31:0] $end
+$var wire 16 W# product [15:0] $end
+$var parameter 32 X# ACC_WIDTH $end
+$var parameter 32 Y# DATA_WIDTH $end
+$var parameter 64 Z# PRODUCT_WIDTH $end
+$var reg 32 [# acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin ROW_GEN[3] $end
+$var parameter 3 \# r $end
+$scope begin COL_GEN[0] $end
+$var wire 8 ]# wgt_out [7:0] $end
+$var wire 8 ^# act_out [7:0] $end
+$var wire 32 _# acc [31:0] $end
+$var parameter 2 `# c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 a# activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 b# weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 c# acc_out [31:0] $end
+$var reg 8 d# activation_out [7:0] $end
+$var reg 8 e# activation_reg [7:0] $end
+$var reg 8 f# weight_out [7:0] $end
+$var reg 8 g# weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 h# a [7:0] $end
+$var wire 8 i# b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 j# product_ext [31:0] $end
+$var wire 16 k# product [15:0] $end
+$var parameter 32 l# ACC_WIDTH $end
+$var parameter 32 m# DATA_WIDTH $end
+$var parameter 64 n# PRODUCT_WIDTH $end
+$var reg 32 o# acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin COL_GEN[1] $end
+$var wire 8 p# wgt_out [7:0] $end
+$var wire 8 q# act_out [7:0] $end
+$var wire 32 r# acc [31:0] $end
+$var parameter 2 s# c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 t# activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 u# weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 v# acc_out [31:0] $end
+$var reg 8 w# activation_out [7:0] $end
+$var reg 8 x# activation_reg [7:0] $end
+$var reg 8 y# weight_out [7:0] $end
+$var reg 8 z# weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 {# a [7:0] $end
+$var wire 8 |# b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 }# product_ext [31:0] $end
+$var wire 16 ~# product [15:0] $end
+$var parameter 32 !$ ACC_WIDTH $end
+$var parameter 32 "$ DATA_WIDTH $end
+$var parameter 64 #$ PRODUCT_WIDTH $end
+$var reg 32 $$ acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin COL_GEN[2] $end
+$var wire 8 %$ wgt_out [7:0] $end
+$var wire 8 &$ act_out [7:0] $end
+$var wire 32 '$ acc [31:0] $end
+$var parameter 3 ($ c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 )$ activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 *$ weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 +$ acc_out [31:0] $end
+$var reg 8 ,$ activation_out [7:0] $end
+$var reg 8 -$ activation_reg [7:0] $end
+$var reg 8 .$ weight_out [7:0] $end
+$var reg 8 /$ weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 0$ a [7:0] $end
+$var wire 8 1$ b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 2$ product_ext [31:0] $end
+$var wire 16 3$ product [15:0] $end
+$var parameter 32 4$ ACC_WIDTH $end
+$var parameter 32 5$ DATA_WIDTH $end
+$var parameter 64 6$ PRODUCT_WIDTH $end
+$var reg 32 7$ acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin COL_GEN[3] $end
+$var wire 8 8$ wgt_out [7:0] $end
+$var wire 8 9$ act_out [7:0] $end
+$var wire 32 :$ acc [31:0] $end
+$var parameter 3 ;$ c $end
+$scope module pe $end
+$var wire 1 $ acc_clear $end
+$var wire 1 % act_load $end
+$var wire 8 <$ activation_in [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( compute_en $end
+$var wire 1 ) rst $end
+$var wire 8 =$ weight_in [7:0] $end
+$var wire 1 + wgt_load $end
+$var wire 32 >$ acc_out [31:0] $end
+$var reg 8 ?$ activation_out [7:0] $end
+$var reg 8 @$ activation_reg [7:0] $end
+$var reg 8 A$ weight_out [7:0] $end
+$var reg 8 B$ weight_reg [7:0] $end
+$scope module mac $end
+$var wire 8 C$ a [7:0] $end
+$var wire 8 D$ b [7:0] $end
+$var wire 1 $ clear_acc $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst $end
+$var wire 32 E$ product_ext [31:0] $end
+$var wire 16 F$ product [15:0] $end
+$var parameter 32 G$ ACC_WIDTH $end
+$var parameter 32 H$ DATA_WIDTH $end
+$var parameter 64 I$ PRODUCT_WIDTH $end
+$var reg 32 J$ acc [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10000 I$
+b1000 H$
+b100000 G$
+b11 ;$
+b10000 6$
+b1000 5$
+b100000 4$
+b10 ($
+b10000 #$
+b1000 "$
+b100000 !$
+b1 s#
+b10000 n#
+b1000 m#
+b100000 l#
+b0 `#
+b11 \#
+b10000 Z#
+b1000 Y#
+b100000 X#
+b11 L#
+b10000 G#
+b1000 F#
+b100000 E#
+b10 9#
+b10000 4#
+b1000 3#
+b100000 2#
+b1 &#
+b10000 !#
+b1000 ~"
+b100000 }"
+b0 q"
+b10 m"
+b10000 k"
+b1000 j"
+b100000 i"
+b11 ]"
+b10000 X"
+b1000 W"
+b100000 V"
+b10 J"
+b10000 E"
+b1000 D"
+b100000 C"
+b1 7"
+b10000 2"
+b1000 1"
+b100000 0"
+b0 $"
+b1 ~
+b10000 |
+b1000 {
+b100000 z
+b11 n
+b10000 i
+b1000 h
+b100000 g
+b10 [
+b10000 V
+b1000 U
+b100000 T
+b1 H
+b10000 C
+b1000 B
+b100000 A
+b0 5
+b0 1
+b100 0
+b100 /
+b100 #
+b100 "
+$end
+#0
+$dumpvars
+bx J$
+bx F$
+bx E$
+bx D$
+bx C$
+bx B$
+bx A$
+bx @$
+bx ?$
+bx >$
+b1000 =$
+b100 <$
+bx :$
+bx 9$
+bx 8$
+bx 7$
+bx 3$
+bx 2$
+bx 1$
+bx 0$
+bx /$
+bx .$
+bx -$
+bx ,$
+bx +$
+b111 *$
+b100 )$
+bx '$
+bx &$
+bx %$
+bx $$
+bx ~#
+bx }#
+bx |#
+bx {#
+bx z#
+bx y#
+bx x#
+bx w#
+bx v#
+b110 u#
+b100 t#
+bx r#
+bx q#
+bx p#
+bx o#
+bx k#
+bx j#
+bx i#
+bx h#
+bx g#
+bx f#
+bx e#
+bx d#
+bx c#
+b101 b#
+b100 a#
+bx _#
+bx ^#
+bx ]#
+bx [#
+bx W#
+bx V#
+bx U#
+bx T#
+bx S#
+bx R#
+bx Q#
+bx P#
+bx O#
+b1000 N#
+b11 M#
+bx K#
+bx J#
+bx I#
+bx H#
+bx D#
+bx C#
+bx B#
+bx A#
+bx @#
+bx ?#
+bx >#
+bx =#
+bx <#
+b111 ;#
+b11 :#
+bx 8#
+bx 7#
+bx 6#
+bx 5#
+bx 1#
+bx 0#
+bx /#
+bx .#
+bx -#
+bx ,#
+bx +#
+bx *#
+bx )#
+b110 (#
+b11 '#
+bx %#
+bx $#
+bx ##
+bx "#
+bx |"
+bx {"
+bx z"
+bx y"
+bx x"
+bx w"
+bx v"
+bx u"
+bx t"
+b101 s"
+b11 r"
+bx p"
+bx o"
+bx n"
+bx l"
+bx h"
+bx g"
+bx f"
+bx e"
+bx d"
+bx c"
+bx b"
+bx a"
+bx `"
+b1000 _"
+b10 ^"
+bx \"
+bx ["
+bx Z"
+bx Y"
+bx U"
+bx T"
+bx S"
+bx R"
+bx Q"
+bx P"
+bx O"
+bx N"
+bx M"
+b111 L"
+b10 K"
+bx I"
+bx H"
+bx G"
+bx F"
+bx B"
+bx A"
+bx @"
+bx ?"
+bx >"
+bx ="
+bx <"
+bx ;"
+bx :"
+b110 9"
+b10 8"
+bx 6"
+bx 5"
+bx 4"
+bx 3"
+bx /"
+bx ."
+bx -"
+bx ,"
+bx +"
+bx *"
+bx )"
+bx ("
+bx '"
+b101 &"
+b10 %"
+bx #"
+bx ""
+bx !"
+bx }
+bx y
+bx x
+bx w
+bx v
+bx u
+bx t
+bx s
+bx r
+bx q
+b1000 p
+b1 o
+bx m
+bx l
+bx k
+bx j
+bx f
+bx e
+bx d
+bx c
+bx b
+bx a
+bx `
+bx _
+bx ^
+b111 ]
+b1 \
+bx Z
+bx Y
+bx X
+bx W
+bx S
+bx R
+bx Q
+bx P
+bx O
+bx N
+bx M
+bx L
+bx K
+b110 J
+b1 I
+bx G
+bx F
+bx E
+bx D
+bx @
+bx ?
+bx >
+bx =
+bx <
+bx ;
+bx :
+bx 9
+bx 8
+b101 7
+b1 6
+bx 4
+bx 3
+bx 2
+bx .
+b1000000001110000011000000101 -
+b100000000110000001000000001 ,
+0+
+b1000000001110000011000000101 *
+0)
+0(
+0'
+b100000000110000001000000001 &
+0%
+0$
+bx !
+$end
+#5000
+1'
+#10000
+1)
+0'
+#15000
+b0 8$
+b0 A$
+b0 9$
+b0 ?$
+b0 E$
+b0 F$
+b0 B$
+b0 D$
+b0 @$
+b0 C$
+b0 :$
+b0 >$
+b0 J$
+b0 %$
+b0 .$
+b0 &$
+b0 ,$
+b0 2$
+b0 3$
+b0 /$
+b0 1$
+b0 -$
+b0 0$
+b0 '$
+b0 +$
+b0 7$
+b0 p#
+b0 y#
+b0 q#
+b0 w#
+b0 }#
+b0 ~#
+b0 z#
+b0 |#
+b0 x#
+b0 {#
+b0 r#
+b0 v#
+b0 $$
+b0 ]#
+b0 f#
+b0 ^#
+b0 d#
+b0 j#
+b0 k#
+b0 g#
+b0 i#
+b0 e#
+b0 h#
+b0 _#
+b0 c#
+b0 o#
+b0 I#
+b0 R#
+b0 J#
+b0 P#
+b0 V#
+b0 W#
+b0 S#
+b0 U#
+b0 Q#
+b0 T#
+b0 K#
+b0 O#
+b0 [#
+b0 6#
+b0 ?#
+b0 7#
+b0 =#
+b0 C#
+b0 D#
+b0 @#
+b0 B#
+b0 >#
+b0 A#
+b0 8#
+b0 <#
+b0 H#
+b0 ##
+b0 ,#
+b0 $#
+b0 *#
+b0 0#
+b0 1#
+b0 -#
+b0 /#
+b0 +#
+b0 .#
+b0 %#
+b0 )#
+b0 5#
+b0 n"
+b0 w"
+b0 o"
+b0 u"
+b0 {"
+b0 |"
+b0 x"
+b0 z"
+b0 v"
+b0 y"
+b0 p"
+b0 t"
+b0 "#
+b0 Z"
+b0 c"
+b0 ["
+b0 a"
+b0 g"
+b0 h"
+b0 d"
+b0 f"
+b0 b"
+b0 e"
+b0 \"
+b0 `"
+b0 l"
+b0 G"
+b0 P"
+b0 H"
+b0 N"
+b0 T"
+b0 U"
+b0 Q"
+b0 S"
+b0 O"
+b0 R"
+b0 I"
+b0 M"
+b0 Y"
+b0 4"
+b0 ="
+b0 5"
+b0 ;"
+b0 A"
+b0 B"
+b0 >"
+b0 @"
+b0 <"
+b0 ?"
+b0 6"
+b0 :"
+b0 F"
+b0 !"
+b0 *"
+b0 ""
+b0 ("
+b0 ."
+b0 /"
+b0 +"
+b0 -"
+b0 )"
+b0 ,"
+b0 #"
+b0 '"
+b0 3"
+b0 k
+b0 t
+b0 l
+b0 r
+b0 x
+b0 y
+b0 u
+b0 w
+b0 s
+b0 v
+b0 m
+b0 q
+b0 }
+b0 X
+b0 a
+b0 Y
+b0 _
+b0 e
+b0 f
+b0 b
+b0 d
+b0 `
+b0 c
+b0 Z
+b0 ^
+b0 j
+b0 E
+b0 N
+b0 F
+b0 L
+b0 R
+b0 S
+b0 O
+b0 Q
+b0 M
+b0 P
+b0 G
+b0 K
+b0 W
+b0 2
+b0 ;
+b0 3
+b0 9
+b0 ?
+b0 @
+b0 <
+b0 >
+b0 :
+b0 =
+b0 !
+b0 .
+b0 4
+b0 8
+b0 D
+1'
+#20000
+0)
+0'
+#25000
+1'
+#30000
+1+
+1%
+0'
+#35000
+b1000 8$
+b1000 A$
+b100000 E$
+b100000 F$
+b1000 B$
+b1000 D$
+b100 9$
+b100 ?$
+b100 @$
+b100 C$
+b111 %$
+b111 .$
+b11100 2$
+b11100 3$
+b111 /$
+b111 1$
+b100 &$
+b100 ,$
+b100 -$
+b100 0$
+b110 p#
+b110 y#
+b11000 }#
+b11000 ~#
+b110 z#
+b110 |#
+b100 q#
+b100 w#
+b100 x#
+b100 {#
+b101 ]#
+b101 f#
+b10100 j#
+b10100 k#
+b101 g#
+b101 i#
+b100 ^#
+b100 d#
+b100 e#
+b100 h#
+b1000 I#
+b1000 R#
+b11000 V#
+b11000 W#
+b1000 S#
+b1000 U#
+b11 J#
+b11 P#
+b11 Q#
+b11 T#
+b111 6#
+b111 ?#
+b10101 C#
+b10101 D#
+b111 @#
+b111 B#
+b11 7#
+b11 =#
+b11 >#
+b11 A#
+b110 ##
+b110 ,#
+b10010 0#
+b10010 1#
+b110 -#
+b110 /#
+b11 $#
+b11 *#
+b11 +#
+b11 .#
+b101 n"
+b101 w"
+b1111 {"
+b1111 |"
+b101 x"
+b101 z"
+b11 o"
+b11 u"
+b11 v"
+b11 y"
+b1000 Z"
+b1000 c"
+b10000 g"
+b10000 h"
+b1000 d"
+b1000 f"
+b10 ["
+b10 a"
+b10 b"
+b10 e"
+b111 G"
+b111 P"
+b1110 T"
+b1110 U"
+b111 Q"
+b111 S"
+b10 H"
+b10 N"
+b10 O"
+b10 R"
+b110 4"
+b110 ="
+b1100 A"
+b1100 B"
+b110 >"
+b110 @"
+b10 5"
+b10 ;"
+b10 <"
+b10 ?"
+b101 !"
+b101 *"
+b1010 ."
+b1010 /"
+b101 +"
+b101 -"
+b10 ""
+b10 ("
+b10 )"
+b10 ,"
+b1000 k
+b1000 t
+b1000 x
+b1000 y
+b1000 u
+b1000 w
+b1 l
+b1 r
+b1 s
+b1 v
+b111 X
+b111 a
+b111 e
+b111 f
+b111 b
+b111 d
+b1 Y
+b1 _
+b1 `
+b1 c
+b110 E
+b110 N
+b110 R
+b110 S
+b110 O
+b110 Q
+b1 F
+b1 L
+b1 M
+b1 P
+b101 2
+b101 ;
+b101 ?
+b101 @
+b101 <
+b101 >
+b1 3
+b1 9
+b1 :
+b1 =
+1'
+#40000
+0+
+0%
+0'
+#45000
+1'
+#50000
+1$
+0'
+#55000
+1'
+#60000
+0$
+0'
+#65000
+1'
+#70000
+1(
+0'
+#75000
+b100000 :$
+b100000 >$
+b100000 J$
+b11100 '$
+b11100 +$
+b11100 7$
+b11000 r#
+b11000 v#
+b11000 $$
+b10100 _#
+b10100 c#
+b10100 o#
+b11000 K#
+b11000 O#
+b11000 [#
+b10101 8#
+b10101 <#
+b10101 H#
+b10010 %#
+b10010 )#
+b10010 5#
+b1111 p"
+b1111 t"
+b1111 "#
+b10000 \"
+b10000 `"
+b10000 l"
+b1110 I"
+b1110 M"
+b1110 Y"
+b1100 6"
+b1100 :"
+b1100 F"
+b1010 #"
+b1010 '"
+b1010 3"
+b1000 m
+b1000 q
+b1000 }
+b111 Z
+b111 ^
+b111 j
+b110 G
+b110 K
+b110 W
+b100000000000000000000000000000000111000000000000000000000000000001100000000000000000000000000000010100000000000000000000000000000110000000000000000000000000000001010100000000000000000000000000010010000000000000000000000000000011110000000000000000000000000001000000000000000000000000000000001110000000000000000000000000000011000000000000000000000000000000101000000000000000000000000000001000000000000000000000000000000001110000000000000000000000000000011000000000000000000000000000000101 !
+b100000000000000000000000000000000111000000000000000000000000000001100000000000000000000000000000010100000000000000000000000000000110000000000000000000000000000001010100000000000000000000000000010010000000000000000000000000000011110000000000000000000000000001000000000000000000000000000000001110000000000000000000000000000011000000000000000000000000000000101000000000000000000000000000001000000000000000000000000000000001110000000000000000000000000000011000000000000000000000000000000101 .
+b101 4
+b101 8
+b101 D
+1'
+#80000
+0(
+0'
+#85000
+1'
+#90000
+0'
+#95000
+1'
+#100000
+0'
+#105000
+1'
+#110000
+0'
+#115000
+1'
+#120000
+0'
